@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Player1 from "./Components/Player1";
+import Player2 from "./Components/Player2";
 
 function App() {
+  function refreshPage() {
+    window.location.reload(false);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Round 1</h1>
+      <Player1 />
+      <Player2 />
+
+      <button className="btn" onClick={refreshPage}>
+        Restart
+      </button>
+      <iframe
+        src="https://giphy.com/embed/l9P7VohdAxjAA"
+        width="480"
+        height="50"
+        frameBorder="0"
+        class="giphy-embed"
+        allowFullScreen
+      ></iframe>
+      <p>
+        <a href="https://giphy.com/gifs/fire-fireball-on-l9P7VohdAxjAA"></a>
+      </p>
     </div>
   );
 }
